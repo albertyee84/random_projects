@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.App {
+  margin: 50px;
+  display: grid;
+  grid-template: 
+    "header1 header2 header3 header4" 200px
+  ;
+  gap: 25px;
+}
+
+.header1{
+  background: #39a59c;
+}
+.header2{
+  background: #344759;
+}
+.header3{
+  background: #e8741e;
+}
+.header4{
+  background: #eceeee;
+}
