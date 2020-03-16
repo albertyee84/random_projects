@@ -82,9 +82,3 @@ export default class Deck {
     }
 
 }
-
-
-const deck = new Deck()
-deck.cards() //?
-deck.shuffleDeck()
-deck.deal() //?
