@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const TodoItem = ({ todo }) => {
+export const Todos = ({ todo }) => {
     return (
-        <div className="todo">
+        <div>
             {todo}
         </div>
     )

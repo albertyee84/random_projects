@@ -1,37 +1,27 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Todoheaders } from './components/todoheaders';
-
-
+import { Header } from './components/header';
 
 function App() {
-  const defList = { '1': ['1', '2'], '2': ['3', '4'], '3': ['5', '6'], '4': ['7', '8'] }
-  const [list, setList] = useState(getLocalList() || defList)
-
-  const headers = Object.keys(list);
-
+  const [todos, setTodos] = useState({ '1': ['1', '2'], '2': ['3', '4'], '3': ['5', '6'], '4': ['7', '8'] })
   return (
     <div className="App">
-      {renderHeaders()}
+      {renderColumnHeaders()}
     </div>
   );
 
-  function renderHeaders() {
+  function renderColumnHeaders() {
+    const headerValue = Object.keys(todos)
     return (
-      headers.map(header => 
-        <Todoheaders 
+      headerValue.map(header => 
+        <Header 
           key={Math.random()}
-          header={header}
-          list={list}
-          setList={setList}
-          todos={list[header]}
-        />
+          header={header} 
+          todos={todos}
+          setTodos={setTodos}
+          />
         )
     )
-  }
-
-  function getLocalList() {
-    return JSON.parse(localStorage.getItem("todoList")) 
   }
 }
 
