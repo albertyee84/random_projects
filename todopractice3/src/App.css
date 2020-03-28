@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  grid-template: ". . . .";
+  gap: 25px;
+  padding: 50px;
+}
+
+[class^="container"] {
+  border: 1px solid black;
+  min-height: 100px;
+}
