@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  grid-template:
+    "header header header"
+    "body body body";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20px, 200px));
+  grid-template-rows: repeat(3, minmax(20px, 200px));
+  grid-area: body;
+}
+
+.cell {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.winner {
+  background: green;
+}
+
+.notwinner {
+  background: red;
+}
